@@ -2,4 +2,8 @@
 lang: es
 ---
 
-Retypeset es un tema de blog estático basado en el framework [Astro](https://astro.build/). Inspirado por [Typography](https://astro-theme-typography.vercel.app/), Retypeset establece un nuevo estándar visual y reimagina el diseño de todas las páginas, creando una experiencia de lectura similar a la de los libros impresos, reviviendo la belleza de la tipografía. Detalles en cada mirada, elegancia en cada espacio.
+Bienvenido al blog de **Lien**.
+
+En el vasto mar de gente y el mundo cambiante, encontrarte entre millones es un destino raro y valioso.
+
+Que en el tenue resplandor de estas palabras podamos escucharnos, conocernos y resonar mutuamente;Que aquí encuentres una compañía gentil y un momento de tiempo tranquilo.
