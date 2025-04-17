@@ -18,7 +18,9 @@ draft: false
 
 
 
-另外看一下论文的测试
+### Deepseek-R1
+
+首先看一下R1这篇论文的测试结果
 
 ![image-20250410153227904](https://lien-bucket.oss-cn-shenzhen.aliyuncs.com/lien-bucket.oss-cn-shenzhen.aliyuncs.comimage-20250410153227904.png)
 
@@ -44,7 +46,7 @@ draft: false
 
 
 
-### DeepSeek-R1-Zero
+#### DeepSeek-R1-Zero
 
 这是一个纯用RL训练出的模型
 
@@ -62,7 +64,7 @@ aha moment：
 
  
 
-### DeepSeek-R1
+#### DeepSeek-R1
 
 为了解决上述问题，DeepSeek训练策略上做了一些改进：
 
@@ -79,7 +81,7 @@ round two：
 
 ![image-20250410155533434](https://lien-bucket.oss-cn-shenzhen.aliyuncs.com/lien-bucket.oss-cn-shenzhen.aliyuncs.comimage-20250410155533434.png)
 
-#### round one
+##### round one
 
 对于sft initialization：需要有sft data（这里论文中叫做cold start data） --> sft
 
@@ -94,7 +96,7 @@ round two：
 
 
 
-#### round two
+##### round two
 
 这轮想要增强是模型的reasoning和general能力
 
@@ -126,7 +128,7 @@ round two的RL:
 
 
 
-### distill
+### Distill
 
 ![image-20250417214923983](https://lien-bucket.oss-cn-shenzhen.aliyuncs.com/lien-bucket.oss-cn-shenzhen.aliyuncs.comimage-20250417214923983.png)
 
