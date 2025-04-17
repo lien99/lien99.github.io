@@ -6,7 +6,7 @@ export const themeConfig: ThemeConfig = {
     // site title
     title: 'lien\'s Blog',
     // site subtitle
-    subtitle: '',
+    subtitle: 'I am a final-year MS student study in Xi’an Jiaotong University.In 2022, I obtained my bachelor’s degree in Computer Science and Technology from Xi’an Jiaotong University .',
     // site description
     description: '欢迎来到 Lien 的博客。\n茫茫人海，浮世万象，于千万人中与你相逢，便是难得的缘分。\n愿在这片文字的微光里，我们彼此聆听、相知、共鸣；\n愿你在这里，收获一份温柔的陪伴，一段静谧的时光。',
     // use i18n title/subtitle/description from src/i18n/ui.ts instead of static ones above
@@ -148,10 +148,10 @@ export const themeConfig: ThemeConfig = {
       //   name: 'Twitter',
       //   url: 'https://x.com/radishzz_',
       // },
-      // {
-      //   name: 'Email',
-      //   url: 'https://example@gmail.com',
-      // }
+      {
+        name: 'Email',
+        url: 'yangzl99@qq.com',
+      }
     ],
     // year of website start
     startYear: 2025,
