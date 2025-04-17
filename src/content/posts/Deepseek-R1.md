@@ -4,9 +4,9 @@ published: 2025-04-18
 draft: false
 ---
 
-# R1
+## R1
 
-## 数据
+### 数据
 
 可以通过[这篇文章](https://arxiv.org/pdf/2306.01116)了解一下LLM在准备数据时候是一个怎么样的流程
 
@@ -44,7 +44,7 @@ draft: false
 
 
 
-## DeepSeek-R1-Zero
+### DeepSeek-R1-Zero
 
 这是一个纯用RL训练出的模型
 
@@ -62,7 +62,7 @@ aha moment：
 
  
 
-## DeepSeek-R1
+### DeepSeek-R1
 
 为了解决上述问题，DeepSeek训练策略上做了一些改进：
 
@@ -79,7 +79,7 @@ round two：
 
 ![image-20250410155533434](https://lien-bucket.oss-cn-shenzhen.aliyuncs.com/lien-bucket.oss-cn-shenzhen.aliyuncs.comimage-20250410155533434.png)
 
-### round one
+#### round one
 
 对于sft initialization：需要有sft data（这里论文中叫做cold start data） --> sft
 
@@ -94,7 +94,7 @@ round two：
 
 
 
-### round two
+#### round two
 
 这轮想要增强是模型的reasoning和general能力
 
@@ -126,15 +126,15 @@ round two的RL:
 
 
 
-## distill
+### distill
 
 ![image-20250417214923983](https://lien-bucket.oss-cn-shenzhen.aliyuncs.com/lien-bucket.oss-cn-shenzhen.aliyuncs.comimage-20250417214923983.png)
 
 
 
-# R1-follow up
+## R1-follow up
 
-## s1
+### s1
 
 s1: Simple test-time scaling：https://arxiv.org/pdf/2501.19393
 
@@ -146,7 +146,7 @@ R1的成功一部分也要来自long CoT，R1是通过RL方法使得模型自主
 
 
 
-## LIMO
+### LIMO
 
 关于sft阶段的reasoning data，还有一篇文章，https://arxiv.org/pdf/2502.03387
 
@@ -156,7 +156,7 @@ R1的成功一部分也要来自long CoT，R1是通过RL方法使得模型自主
 
 ![image-20250417221806596](https://lien-bucket.oss-cn-shenzhen.aliyuncs.com/lien-bucket.oss-cn-shenzhen.aliyuncs.comimage-20250417221806596.png)
 
-## Overthinking & Underthinking
+### Overthinking & Underthinking
 
 Do NOT Think That Much for 2+3=? On the Overthinking of o1-Like LLMs：https://arxiv.org/pdf/2412.21187,这篇文章主要是研究overthinking的问题
 
@@ -164,7 +164,7 @@ Thoughts Are All Over the Place: On the Underthinking of o1-Like LLMs：https://
 
 
 
-# GRPO / DeepseekMath
+## GRPO / DeepseekMath
 
 DeepseekMath的训练过程也是经典的LLM训练范式
 
@@ -174,7 +174,7 @@ DeepseekMath的训练过程也是经典的LLM训练范式
 3. RL GRPO
 ```
 
-## pretrain
+### pretrain
 
 先在一个1.3B的模型上训练试验：
 
@@ -192,7 +192,7 @@ FastText Model是一个比较小的二分类模型，判断网页是否数学相
 
 ![image-20250417224018311](https://lien-bucket.oss-cn-shenzhen.aliyuncs.com/lien-bucket.oss-cn-shenzhen.aliyuncs.comimage-20250417224018311.png)
 
-## sft
+### sft
 
 该环节需要收集一些和数学相关的instruct tuning dataset
 
@@ -212,7 +212,7 @@ FastText Model是一个比较小的二分类模型，判断网页是否数学相
 
 ![image-20250417225249755](https://lien-bucket.oss-cn-shenzhen.aliyuncs.com/lien-bucket.oss-cn-shenzhen.aliyuncs.comimage-20250417225249755.png)
 
-## RL
+### RL
 
 Refrence Model：做完sft后的model，即RL的起始model
 
