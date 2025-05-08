@@ -71,7 +71,7 @@ open-ai提出的LLM训练范式一般包含两个阶段：
 
 大多数的LLM的训练基本还是沿用这个范式
 
-![image-20250411150742270](https://lien-bucket.oss-cn-shenzhen.aliyuncs.com/lien-bucket.oss-cn-shenzhen.aliyuncs.comimage-20250411150742270.png)
+![image-20250411150742270](https://typora-1305283193.cos.ap-guangzhou.myqcloud.com/typora/image-20250411150742270.png)
 
 这里openai的RL过程类似如下流程：
 
@@ -83,7 +83,7 @@ open-ai提出的LLM训练范式一般包含两个阶段：
 
 但是PPO实在太过于繁琐，而且reward model训练起来也很难（一是训练数据很难覆盖所有领域，二是即便数据搞定了，reward model还是很难很好的代表人的喜好，根据这样的reward model训练出来的模型效果可想而知），后续人们为了简便，提出了DPO
 
-![image-20250411154443857](https://lien-bucket.oss-cn-shenzhen.aliyuncs.com/lien-bucket.oss-cn-shenzhen.aliyuncs.comimage-20250411154443857.png)
+![image-20250411154443857](https://typora-1305283193.cos.ap-guangzhou.myqcloud.com/typora/image-20250411154443857.png)
 
 
 
@@ -91,9 +91,9 @@ open-ai提出的LLM训练范式一般包含两个阶段：
 
 ### scaling law & emergent ability
 
-![image-20250411152902531](https://lien-bucket.oss-cn-shenzhen.aliyuncs.com/lien-bucket.oss-cn-shenzhen.aliyuncs.comimage-20250411152902531.png)
+![image-20250411152902531](https://typora-1305283193.cos.ap-guangzhou.myqcloud.com/typora/image-20250411152902531.png)
 
-![image-20250411153000957](https://lien-bucket.oss-cn-shenzhen.aliyuncs.com/lien-bucket.oss-cn-shenzhen.aliyuncs.comimage-20250411153000957.png)
+![image-20250411153000957](https://typora-1305283193.cos.ap-guangzhou.myqcloud.com/typora/image-20250411153000957.png)
 
 
 
@@ -108,25 +108,25 @@ open-ai提出的LLM训练范式一般包含两个阶段：
 1. system 1，主要包括很多记忆的知识
 2. system 2，主要是很多需要推理、思考的内容
 
-![image-20250411164510491](https://lien-bucket.oss-cn-shenzhen.aliyuncs.com/lien-bucket.oss-cn-shenzhen.aliyuncs.comimage-20250411164510491.png)
+![image-20250411164510491](https://typora-1305283193.cos.ap-guangzhou.myqcloud.com/typora/image-20250411164510491.png)
 
 
 
 最初的CoT是在prompt中添加few-shot，使得模型模仿这种回复风格进行思考
 
-![image-20250411170028321](https://lien-bucket.oss-cn-shenzhen.aliyuncs.com/lien-bucket.oss-cn-shenzhen.aliyuncs.comimage-20250411170028321.png)
+![image-20250411170028321](https://typora-1305283193.cos.ap-guangzhou.myqcloud.com/typora/image-20250411170028321.png)
 
 但是这种方式有一个很大的弊端是针对不同的任务需要人为地设计不同的CoT prompt，这是很繁琐的，所以有了后来的Zero-shot的CoT
 
-![image-20250411170007266](https://lien-bucket.oss-cn-shenzhen.aliyuncs.com/lien-bucket.oss-cn-shenzhen.aliyuncs.comimage-20250411170007266.png)
+![image-20250411170007266](https://typora-1305283193.cos.ap-guangzhou.myqcloud.com/typora/image-20250411170007266.png)
 
 但是发现Zero-shot-CoT虽然很简单，但是整体性能是要差一点的，这个时候有人将上述两种方法结合试了一下
 
-![image-20250411170816836](https://lien-bucket.oss-cn-shenzhen.aliyuncs.com/lien-bucket.oss-cn-shenzhen.aliyuncs.comimage-20250411170816836.png)
+![image-20250411170816836](https://typora-1305283193.cos.ap-guangzhou.myqcloud.com/typora/image-20250411170816836.png)
 
 后续又有人采用了多数投票的方法增强模型的性能，如下所示：
 
-![image-20250411171433305](https://lien-bucket.oss-cn-shenzhen.aliyuncs.com/lien-bucket.oss-cn-shenzhen.aliyuncs.comimage-20250411171433305.png)
+![image-20250411171433305](https://typora-1305283193.cos.ap-guangzhou.myqcloud.com/typora/image-20250411171433305.png)
 
 
 
@@ -138,9 +138,9 @@ open-ai提出的LLM训练范式一般包含两个阶段：
 
 如何获取CoT的数据呢？这里主要是用LLM自己生成self-consistency的数据
 
-![image-20250411171937651](https://lien-bucket.oss-cn-shenzhen.aliyuncs.com/lien-bucket.oss-cn-shenzhen.aliyuncs.comimage-20250411171937651.png)
+![image-20250411171937651](https://typora-1305283193.cos.ap-guangzhou.myqcloud.com/typora/image-20250411171937651.png)
 
-![image-20250411172208907](https://lien-bucket.oss-cn-shenzhen.aliyuncs.com/lien-bucket.oss-cn-shenzhen.aliyuncs.comimage-20250411172208907.png)
+![image-20250411172208907](https://typora-1305283193.cos.ap-guangzhou.myqcloud.com/typora/image-20250411172208907.png)
 
 
 
@@ -148,13 +148,13 @@ open-ai提出的LLM训练范式一般包含两个阶段：
 
 首先介绍一下RL在LLM中的范式
 
-![image-20250411173256055](https://lien-bucket.oss-cn-shenzhen.aliyuncs.com/lien-bucket.oss-cn-shenzhen.aliyuncs.comimage-20250411173256055.png)
+![image-20250411173256055](https://typora-1305283193.cos.ap-guangzhou.myqcloud.com/typora/image-20250411173256055.png)
 
 
 
 reward model可以分为两种形式：
 
-![image-20250411173420445](https://lien-bucket.oss-cn-shenzhen.aliyuncs.com/lien-bucket.oss-cn-shenzhen.aliyuncs.comimage-20250411173420445.png)
+![image-20250411173420445](https://typora-1305283193.cos.ap-guangzhou.myqcloud.com/typora/image-20250411173420445.png)
 
 orm又可以分为两种：1. solution level的orm. 2. token level的orm.
 
@@ -170,7 +170,7 @@ reward model本质是给定一个CoT，判断整体或者是每一步CoT的好�
 
 在[openai的论文](https://arxiv.org/pdf/2110.14168)中提出了**orm**的方式验证模型最后的CoT是否正确从而实现test time compute
 
-![image-20250417144037930](https://lien-bucket.oss-cn-shenzhen.aliyuncs.com/lien-bucket.oss-cn-shenzhen.aliyuncs.comimage-20250417144037930.png)
+![image-20250417144037930](https://typora-1305283193.cos.ap-guangzhou.myqcloud.com/typora/image-20250417144037930.png)
 
 论文中的 generator 和 verifier都是gpt（gpt3 175B/6B）
 
@@ -193,29 +193,29 @@ verifier的作用是，给定一个CoT，判断该CoT是否正确
 
 具体的训练细节是使用**联合目标函数（joint objective）**来训练 verifier（验证器），使得模型在完成原始语言建模任务的同时，还能学习判断模型生成结果是正确还是错误。verifier 本身就是一个语言模型，但在其输出层上加了一个小型的**标量头（scalar head）**，该头部可以为每个 token 给出一个预测结果。用一个**偏置参数（bias）**和一个**增益参数（gain）**来实现这个标量头，它们作用于语言模型最终反嵌入层（unembedding layer）输出的 logits 上。这两个参数会对词表中某个**特殊 token**对应的 logit 值进行平移（加偏置）和缩放（乘增益）。其他 token 的 logits 仍用于完成语言建模任务，而这个特殊 token 的 logit 就被专门用于验证器的预测任务。我们可以选择用与生成器相同的预训练语言模型来初始化 verifier，也可以直接从生成器本身进行初始化。在消融实验中，后者（从生成器初始化）表现略优。我们认为这是因为：若 verifier 更好地理解了生成器学习到的语言分布，那么它对该分布下样本的评分会更准确。
 
-![image-20250417153500310](https://lien-bucket.oss-cn-shenzhen.aliyuncs.com/lien-bucket.oss-cn-shenzhen.aliyuncs.comimage-20250417153500310.png)
+![image-20250417153500310](https://typora-1305283193.cos.ap-guangzhou.myqcloud.com/typora/image-20250417153500310.png)
 
 可以看到右图中绿色的是对每个token的prediction，后续的实验证实，token level的verifier也是更好的。
 
 后续openai又发了[一篇paper](https://arxiv.org/pdf/2305.20050)，主要是prm model，并且证明了说prm model是比orm model效果要更好
 
-![image-20250417155946517](https://lien-bucket.oss-cn-shenzhen.aliyuncs.com/lien-bucket.oss-cn-shenzhen.aliyuncs.comimage-20250417155946517.png)
+![image-20250417155946517](https://typora-1305283193.cos.ap-guangzhou.myqcloud.com/typora/image-20250417155946517.png)
 
 有了这样一个针对每个step标注的数据集，可以训练prm model，类似orm model的训练策略，就可以给定每一个推理步骤都判断是对或错
 
-![image-20250417160234771](https://lien-bucket.oss-cn-shenzhen.aliyuncs.com/lien-bucket.oss-cn-shenzhen.aliyuncs.comimage-20250417160234771.png)
+![image-20250417160234771](https://typora-1305283193.cos.ap-guangzhou.myqcloud.com/typora/image-20250417160234771.png)
 
 有了这样的prm model后，在inference时，针对每个问题Q，会产生很多的答案Solution，每个Solution都有很多的步骤step，prm会给每个step都输出一个probability，将每一步的probability乘起来，作为整个Solution的打分，并用于筛选答案。
 
-![image-20250417160646896](https://lien-bucket.oss-cn-shenzhen.aliyuncs.com/lien-bucket.oss-cn-shenzhen.aliyuncs.comimage-20250417160646896.png)
+![image-20250417160646896](https://typora-1305283193.cos.ap-guangzhou.myqcloud.com/typora/image-20250417160646896.png)
 
 #### reward signal
 
 此外，[deep-mind也有一篇文章在讨论prm和orm](https://arxiv.org/pdf/2211.14275)，并且不同的是，这篇文章不仅将prm和orm用到了RL框架中作为reward signal的来源，也在test time compute的时候用作选取最佳答案的verifier
 
-![image-20250417161315978](https://lien-bucket.oss-cn-shenzhen.aliyuncs.com/lien-bucket.oss-cn-shenzhen.aliyuncs.comimage-20250417161315978.png)
+![image-20250417161315978](https://typora-1305283193.cos.ap-guangzhou.myqcloud.com/typora/image-20250417161315978.png)
 
 这里[deepseek也有一篇文章](https://arxiv.org/pdf/2312.08935)，提出了一种自动获取prm训练过程中每一个step需要的label
 
-![image-20250417162453887](https://lien-bucket.oss-cn-shenzhen.aliyuncs.com/lien-bucket.oss-cn-shenzhen.aliyuncs.comimage-20250417162453887.png)
+![image-20250417162453887](https://typora-1305283193.cos.ap-guangzhou.myqcloud.com/typora/image-20250417162453887.png)
 
